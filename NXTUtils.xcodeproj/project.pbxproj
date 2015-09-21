@@ -15,12 +15,13 @@
 		3D37F1A51BB0712900F85339 /* NXTDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D37F1A41BB0712900F85339 /* NXTDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D97674A1BB074EE00125371 /* NXTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9767491BB074EE00125371 /* NXTKit.framework */; };
 		3D97674E1BB075CB00125371 /* IOBluetoothUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D97674D1BB075CB00125371 /* IOBluetoothUI.framework */; };
+		3D9767561BB07C2400125371 /* NXTUtils_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 3D9767551BB07C2400125371 /* NXTUtils_Prefix.pch */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D37F1901BB0705E00F85339 /* NXTUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NXTUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D37F1931BB0705E00F85339 /* NXTUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NXTUtils.h; sourceTree = "<group>"; };
-		3D37F1951BB0705E00F85339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = NXTUtils/Info.plist; sourceTree = "<group>"; };
+		3D37F1951BB0705E00F85339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D37F19C1BB070ED00F85339 /* NXTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXTDevice.h; sourceTree = "<group>"; };
 		3D37F19D1BB070ED00F85339 /* NXTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXTDevice.m; sourceTree = "<group>"; };
 		3D37F19E1BB070ED00F85339 /* NXTDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXTDeviceManager.h; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		3D37F1A41BB0712900F85339 /* NXTDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXTDefines.h; sourceTree = "<group>"; };
 		3D9767491BB074EE00125371 /* NXTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NXTKit.framework; path = "/Volumes/Gleue Interactive/Developer/Xcode/DerivedData/MINDcode-acpkbjyziklckhbbegocrslktucz/Build/Products/Debug/NXTKit.framework"; sourceTree = "<absolute>"; };
 		3D97674D1BB075CB00125371 /* IOBluetoothUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetoothUI.framework; path = System/Library/Frameworks/IOBluetoothUI.framework; sourceTree = SDKROOT; };
+		3D9767551BB07C2400125371 /* NXTUtils_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXTUtils_Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				3D37F1921BB0705E00F85339 /* Classes */,
+				3D9767541BB07C0600125371 /* Other Sources */,
 				3D9767531BB077D600125371 /* Resources */,
 				3D9767521BB0767B00125371 /* External Frameworks */,
 				3D37F1911BB0705E00F85339 /* Products */,
@@ -100,6 +103,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		3D9767541BB07C0600125371 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3D9767551BB07C2400125371 /* NXTUtils_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -109,6 +120,7 @@
 			files = (
 				3D37F1A21BB070ED00F85339 /* NXTDeviceManager.h in Headers */,
 				3D37F1A51BB0712900F85339 /* NXTDefines.h in Headers */,
+				3D9767561BB07C2400125371 /* NXTUtils_Prefix.pch in Headers */,
 				3D37F1941BB0705E00F85339 /* NXTUtils.h in Headers */,
 				3D37F1A01BB070ED00F85339 /* NXTDevice.h in Headers */,
 			);
@@ -285,8 +297,10 @@
 					"../NXTKit/**",
 				);
 				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NXTUtils_Prefix.pch;
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = NXTUtils/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gleue-interactive.NXTUtils";
@@ -308,8 +322,10 @@
 					"../NXTKit/**",
 				);
 				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NXTUtils_Prefix.pch;
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = NXTUtils/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gleue-interactive.NXTUtils";
