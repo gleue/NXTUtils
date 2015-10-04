@@ -94,7 +94,7 @@ NSString * const kNXTDeviceDidChangeNotification = @"kNXTDeviceDidChangeNotifica
     
     [super deviceTransportDidOpen:aTransport];
 
-    [self update];
+    [self performSelector:@selector(update) withObject:nil afterDelay:0.1];
 }
 
 - (void)deviceTransportDidClose:(MRDeviceTransport *)aTransport {
