@@ -58,7 +58,7 @@ NSString * const kNXTDeviceDidChangeNotification = @"kNXTDeviceDidChangeNotifica
         
         MRNXTDeviceInfoResponse *info = response;
         
-        if (info.status == 0) {
+        if (info.status == NXTStatusSuccess) {
             
             weakSelf.deviceName = info.brickName;
             weakSelf.freeSpace = info.freeSpace;
@@ -76,7 +76,7 @@ NSString * const kNXTDeviceDidChangeNotification = @"kNXTDeviceDidChangeNotifica
         
         MRNXTBatteryLevelResponse *lvl = response;
         
-        if (lvl.status == 0) {
+        if (lvl.status == NXTStatusSuccess) {
             
             weakSelf.batteryLevel = lvl.batteryLevel;
             
